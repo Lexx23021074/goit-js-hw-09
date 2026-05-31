@@ -1,0 +1,43 @@
+/* Скидання базових маркерів та падінгів списку */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+/* Ширина кожного елемента (по 3 в ряд з урахуванням gap) */
+.gallery-item {
+  width: calc((100% - 48px) / 3);
+}
+
+/* Робимо посилання блочним, щоб картинка займала всю площу */
+.gallery-link {
+  display: block;
+  text-decoration: none;
+}
+
+/* Налаштування самої картинки */
+.gallery-image {
+  width: 100%;
+  height: 200px; /* або auto, залежно від того, як хочеш підігнати висоту */
+  object-fit: cover;
+  display: block;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ефект при ховері, як у макеті */
+.gallery-image:hover {
+  transform: scale(1.03);
+  cursor: zoom-in;
+}
+/* Стилізація зображення всередині модального вікна */
+.modal img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px; /* трохи закруглимо кути для краси */
+}
